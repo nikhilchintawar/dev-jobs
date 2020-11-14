@@ -1,0 +1,10 @@
+.job-skill{
+    background-color:hsl(180, 31%, 95%);
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+}
+.skill{
+    color: hsl(180, 29%, 50%);
+    font-weight: bold;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,12 @@
+.job-info{
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 1.8rem;
+    font-size: 1.2rem;
+    color: #a9a9a9;
+    padding-left: unset;
+}
+
+li:first-child{
+    list-style: none;
+}
