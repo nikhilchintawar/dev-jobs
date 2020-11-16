@@ -1,13 +1,12 @@
 import "./JobInfo.css";
 
-const JobInfo = () => {
-    return (
+const JobInfo = ({jobInfo}) => (
         <ul className="job-info">
-            <li>1d ago</li>
-            <li>Full Time</li>
-            <li>INDIA only</li>
+            {
+                jobInfo.map((info, index) => <li key={index}>{info}</li>)
+            }
         </ul>
     );
-};
+
 
 export default JobInfo;

@@ -3,30 +3,37 @@ import JobInfo from "../job-info/JobInfo";
 import JobSkill from "../job-skills/JobSkill";
 
 import "./JobCard.css";
-import { ReactComponent as AccountLogo} from "../../assets/account.svg";
 
-
-const JobCard = () => {
-    return (
-<div className="job-card">
-          <AccountLogo className="logo" />
+const JobCard = ({logo, companyName, filters, jobRole, jobInfo, skills}) => (
+    <div className="job-card">
+          <img src={logo} width="90px" alt="company-logo" className="logo" />
           <div className="company">
-            <h3 className="company-name">Account</h3>
-            <JobFilter bgColor="hsl(180, 29%, 50%)" filter="NEW!" />
-            <JobFilter bgColor="hsl(0, 0%, 0%)" filter="FEATURED" />
+            <h3 className="company-name">{companyName}</h3>
+
+            {
+              filters 
+              ?
+              filters.map((filter, index) => (
+                <JobFilter 
+                  key={index} 
+                  filter={filter}
+                  bgColor= {filter === "NEW!" ? "hsl(180, 29%, 50%)" : "hsl(0, 0%, 0%)"}
+                />
+              ))
+              :
+              ""
+            }
+
           </div>
-          <div className="job-role">Senior Frontend Developer</div>
-          <JobInfo />
+          <div className="job-role">{jobRole}</div>
+          <JobInfo jobInfo={jobInfo} />
           <hr/>
           <div className="job-skills">
-            <JobSkill skill="Frontend" />
-            <JobSkill skill="Senior" />
-            <JobSkill skill="HTML" />
-            <JobSkill skill="CSS" />
-            <JobSkill skill="JavaScript" />
+            {
+              skills.map((skill, index) => <JobSkill key={index} skill={skill} />)
+            }
           </div>
       </div>
     );
-};
 
 export default JobCard;
