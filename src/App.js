@@ -11,15 +11,17 @@ const App = () => {
       <header className="App-header">
         <h1>Dev Jobs</h1>
       </header>
-      {
-        jobData.map(({id, companyLogo, ...otherJobData}) => (
-          <JobCard
-            key={id}
-            logo={companyLogo}
-            {...otherJobData}
-          />
-        ))
-      }
+      <div className="job-cards">
+        {
+          jobData.map(({id, companyLogo, ...otherJobData}) => (
+            <JobCard
+              key={id}
+              logo={companyLogo}
+              {...otherJobData}
+            />
+          ))
+        }
+      </div>
     </div>
   );
 }

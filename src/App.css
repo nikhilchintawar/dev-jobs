@@ -16,3 +16,10 @@
   color: #61dafb;
 }
 
+@media screen and (min-width: 900px){
+  .job-cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+  }
+}

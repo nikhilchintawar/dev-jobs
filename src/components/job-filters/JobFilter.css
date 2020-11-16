@@ -5,3 +5,11 @@
     font-weight: bolder;
     font-size: 1.3rem;
 }
+
+/* @media screen and (min-width: 800px){
+    .job-filter{
+        border-radius: 16px;
+        padding: 6px;
+        font-size: 16px;
+    }
+} */
