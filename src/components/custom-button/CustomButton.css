@@ -23,9 +23,13 @@
     border: 1px solid black;
 }
 
-/* .github-sign-in{
-
-} */
+.github-sign-in{
+    background-color: #24292e;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .inverted {
     background-color: white;

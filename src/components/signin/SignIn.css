@@ -1,0 +1,16 @@
+.github-icon{
+    margin-right: 5px;
+}
+
+.signin{
+    display: flex;
+    justify-content: center;
+    background-image: url(https://images.pexels.com/photos/3153203/pexels-photo-3153203.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+button{
+    margin-top: 40vh;
+}

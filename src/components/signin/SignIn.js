@@ -1,16 +1,22 @@
-import React from 'react';
+import {FaGithub} from "react-icons/fa";
+
+import "./SignIn.css";
 import CustomButton from '../custom-button/CustomButton';
 import { signInWithGitHub } from '../../firebase/firebase.utils';
-
+import { Fragment } from "react";
 
 const SignIn = () => {
     return (
-        <div>
+        <Fragment>
+        <div className="signin">
             <CustomButton 
                 onClick={signInWithGitHub}
-                children="Sign In With GitHub"
-            />
+                isGitHubSignIn
+            >
+                <FaGithub size={25} className="github-icon" /> sign in with github
+            </CustomButton>
         </div>
+        </Fragment>
     );
 };
 
