@@ -14,3 +14,13 @@ const firebaseConfig = {
 };
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+export const auth = firebase.auth();
+
+const provider = new firebase.auth.GithubAuthProvider();
+provider.setCustomParameters({ prompt: 'select_account' });
+
+export const signInWithGitHub = () => auth.signInWithPopup(provider);
+
+
+export default firebase;
